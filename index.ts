@@ -140,3 +140,5 @@ class IELTSScoreCalculator {
 }
 
 export const calculate = new IELTSScoreCalculator();
+
+export const test = "test test test";
