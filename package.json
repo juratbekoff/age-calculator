@@ -1,7 +1,7 @@
 {
-  "name": "age-calculator",
+  "name": "ielts-score-calculator",
   "version": "1.0.0",
-  "description": "this is a age calculator",
+  "description": "this is an IELTS band score calculator",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "age-calculator-test-jurat": "^1.0.0",
     "typescript": "^5.4.3"
   }
 }
