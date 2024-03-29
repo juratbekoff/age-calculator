@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "age-calculator-test-jurat": "^1.0.0",
+    "ielts-score-calculator-demo": "^1.0.2",
     "typescript": "^5.4.3"
   }
 }

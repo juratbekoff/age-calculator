@@ -1,4 +1,4 @@
-export class IELTSScoreCalculator {
+class IELTSScoreCalculator {
   private conversionTable: { [key: string]: { [key: number]: number } };
 
   constructor() {
@@ -138,3 +138,11 @@ export class IELTSScoreCalculator {
     return this.calculateScore(calc).toFixed(1);
   }
 }
+
+const calculator = new IELTSScoreCalculator();
+
+// functions of classes
+const calculateOverallScore = calculator.calculateOverallScore.bind(calculator);
+const convertToScore = calculator.convertToScore.bind(calculator);
+
+export { calculateOverallScore, convertToScore };
