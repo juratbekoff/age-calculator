@@ -1,6 +1,6 @@
 {
   "name": "ielts-score-calculator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "this is an IELTS band score calculator",
   "main": "dist/index.js",
   "scripts": {
