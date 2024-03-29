@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.convertToScore = exports.calculateOverallScore = void 0;
+exports.calculate = void 0;
 class IELTSScoreCalculator {
     constructor() {
         this.conversionTable = {
@@ -119,7 +119,7 @@ class IELTSScoreCalculator {
         const score = (task1 + task2 + task2) / 3;
         return this.calculateScore(score);
     }
-    calculateOverallScore(listeningCorrect, readingCorrect, writingTasks, speaking) {
+    overallScore(listeningCorrect, readingCorrect, writingTasks, speaking) {
         const listeningScore = this.convertToScore(listeningCorrect, "listening");
         const readingScore = this.convertToScore(readingCorrect, "reading");
         const writingScore = this.calculateWritingScore(writingTasks.task1, writingTasks.task2);
@@ -127,9 +127,5 @@ class IELTSScoreCalculator {
         return this.calculateScore(calc).toFixed(1);
     }
 }
-const calculator = new IELTSScoreCalculator();
-const calculateOverallScore = calculator.calculateOverallScore.bind(calculator);
-exports.calculateOverallScore = calculateOverallScore;
-const convertToScore = calculator.convertToScore.bind(calculator);
-exports.convertToScore = convertToScore;
+exports.calculate = new IELTSScoreCalculator();
 //# sourceMappingURL=index.js.map

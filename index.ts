@@ -92,7 +92,7 @@ class IELTSScoreCalculator {
     };
   }
 
-  public convertToScore(correctCount: number, section: string): number {
+  private convertToScore(correctCount: number, section: string): number {
     if (!this.conversionTable[section].hasOwnProperty(correctCount)) {
       throw new Error("Invalid correct count for conversion.");
     }
@@ -121,7 +121,7 @@ class IELTSScoreCalculator {
     return this.calculateScore(score);
   }
 
-  public calculateOverallScore(
+  public overallScore(
     listeningCorrect: number,
     readingCorrect: number,
     writingTasks: { task1: number; task2: number },
@@ -139,10 +139,4 @@ class IELTSScoreCalculator {
   }
 }
 
-const calculator = new IELTSScoreCalculator();
-
-// functions of classes
-const calculateOverallScore = calculator.calculateOverallScore.bind(calculator);
-const convertToScore = calculator.convertToScore.bind(calculator);
-
-export { calculateOverallScore, convertToScore };
+export const calculate = new IELTSScoreCalculator();
