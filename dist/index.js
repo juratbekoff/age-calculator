@@ -124,7 +124,19 @@ class IELTSScoreCalculator {
         const readingScore = this.convertToScore(readingCorrect, "reading");
         const writingScore = this.calculateWritingScore(writingTasks.task1, writingTasks.task2);
         let calc = (listeningScore + readingScore + writingScore + speaking) / 4;
-        return this.calculateScore(calc).toFixed(1);
+        return {
+            overall: this.calculateScore(calc).toFixed(1),
+            each: {
+                reading_score: readingScore,
+                reading_answers: readingCorrect,
+                listening_score: listeningScore,
+                listening_answers: listeningCorrect,
+                writing_task1_score: writingTasks.task1,
+                writing_task2_score: writingTasks.task2,
+                writing_score_overall: writingScore,
+                speaking_score: speaking,
+            },
+        };
     }
 }
 exports.calculate = new IELTSScoreCalculator();
