@@ -94,7 +94,9 @@ class IELTSScoreCalculator {
     }
     convertToScore(correctCount, section) {
         if (!this.conversionTable[section].hasOwnProperty(correctCount)) {
-            throw new Error("Invalid correct count to calculate.");
+            throw new Error(`Invalid correct count on section: ${section
+                .charAt(0)
+                .toUpperCase()}${section.slice(1)}`);
         }
         return this.conversionTable[section][correctCount];
     }
