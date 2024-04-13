@@ -1,7 +1,7 @@
 declare class IELTSScoreCalculator {
     private conversionTable;
     constructor();
-    private convertToScore;
+    convertToScore(correctCount: number, section: string): number;
     private calculateScore;
     private calculateWritingScore;
     overallScore(listeningCorrect: number, readingCorrect: number, writingTasks: {
