@@ -116,7 +116,7 @@ class IELTSScoreCalculator {
     return overall;
   }
 
-  private calculateWritingScore(task1: number, task2: number): number {
+  public calculateWritingScore(task1: number, task2: number): number {
     const score = (task1 + task2 + task2) / 3;
     return this.calculateScore(score);
   }

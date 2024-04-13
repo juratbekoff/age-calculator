@@ -3,7 +3,7 @@ declare class IELTSScoreCalculator {
     constructor();
     convertToScore(correctCount: number, section: string): number;
     private calculateScore;
-    private calculateWritingScore;
+    calculateWritingScore(task1: number, task2: number): number;
     overallScore(listeningCorrect: number, readingCorrect: number, writingTasks: {
         task1: number;
         task2: number;
